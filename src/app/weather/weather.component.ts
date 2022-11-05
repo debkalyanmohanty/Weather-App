@@ -23,9 +23,10 @@ export class WeatherComponent implements OnInit {
     this.apixuService.getWeather(formValues.location).subscribe(data => {
       this.weatherData = data;
       console.log(this.weatherData);
-    });
-    const divdets = document.querySelector('.dets');
-    divdets?.classList.remove('d-none');
+      const divdets = document.querySelector('.dets');
+      divdets?.classList.remove('d-none');
 
+    });
+    
 }
 }
