@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h3 class="text-center my-4" style="color: #fff; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Search for Weather:</h3>
+        <h3 class="text-center my-4" style="color: #fff; font-family: 'Crete Round', serif;">Search City:</h3>
         <form
           [formGroup]="weatherSearchForm"
           (ngSubmit)="sendApiRequest(weatherSearchForm.value)"
@@ -18,26 +18,33 @@
           </div>
           <div class="text-center">
             <button type="submit" class="btn btn-success btn-md search-weather">
-              Search for the weather
+              City
             </button>
           </div>
         </form>
       </div>
       <div class="col-md-6 dets d-none ">
-        <h3 class="text-center my-4">Weather Details:</h3>
+        <h3 class="text-center my-4">Details:</h3>
+        <div class="img-responsive">
+        <img   src={{this.weatherData?.current.weather_icons[0]}} alt="">
+      </div>
         <p class="text-center">
-          Current weather conditions: {{ this.weatherData?.current.weather_descriptions[0]}}.
+          Current weather conditions: <span  class="weather-dets"> &nbsp;{{ this.weatherData?.current.weather_descriptions[0]}}</span>.
         </p>
         <p class="text-center">
-          Temperature in Degrees Celsius: {{ this.weatherData?.current.temperature }}
+          Temperature : <span class="weather-dets">&nbsp;{{ this.weatherData?.current.temperature }} &#8451; </span>
         </p>
        
         <p class="text-center">
-          Feels like in Degrees Celsius: {{ this.weatherData?.current.feelslike}}
+          Feels like : <span class="weather-dets">&nbsp;{{ this.weatherData?.current.feelslike}} &#8451;</span>
+        </p>
+        
+        <p class="text-center">
+          Wind Speed: <span class="weather-dets">&nbsp; {{ this.weatherData?.current.wind_speed }} </span>
         </p>
       
         <p class="text-center">
-          Location Searched: {{ this.weatherData?.location.name }}, {{
+          Location Searched: &nbsp; {{ this.weatherData?.location.name }}, &nbsp;{{
           this.weatherData?.location.country }}.
         </p>
       </div>

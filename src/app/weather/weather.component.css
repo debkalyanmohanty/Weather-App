@@ -13,3 +13,17 @@ div .dets{
 div .form-group{
     height: 100%;
 }
+div .img-responsive{
+    display: flex;
+    justify-content: center;
+}
+.weather-dets{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3rem;
+    color: whitesmoke;
+    font-weight: 900;
+    
+}
+button{
+    font-family: 'Ubuntu', sans-serif;
+}
