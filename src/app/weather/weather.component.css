@@ -1,3 +1,15 @@
 .search-weather{
     margin: 2.5%;
 }
+div .dets{
+    color: #fff;
+    background-color: black;
+    font-weight: 900;
+    font-size: 1rem;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+
+div .form-group{
+    height: 100%;
+}

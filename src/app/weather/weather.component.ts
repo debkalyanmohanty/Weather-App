@@ -15,13 +15,17 @@ export class WeatherComponent implements OnInit {
     this.weatherSearchForm = this.formBuilder.group({
       location: [' ']
     });
+   
   }
 
   sendApiRequest(formValues: any){
+   
     this.apixuService.getWeather(formValues.location).subscribe(data => {
       this.weatherData = data;
       console.log(this.weatherData);
     });
+    const divdets = document.querySelector('.dets');
+    divdets?.classList.remove('d-none');
 
 }
 }
